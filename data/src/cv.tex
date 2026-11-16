@@ -1,0 +1,132 @@
+\documentclass[10.5pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage[scaled=0.92]{helvet}
+\usepackage[a4paper,top=15mm,bottom=15mm,left=17mm,right=17mm]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\definecolor{accent}{HTML}{1F3F7A}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\footnotesize\color{gray}DongGeon Kwak \quad \thepage}
+\setlength{\parindent}{0pt}
+\linespread{1.04}
+
+\titleformat{\section}{\color{accent}\sffamily\bfseries\small}{}{0pt}{\MakeUppercase}[\vspace{-6pt}\color{accent}\rule{\textwidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{11pt}{6pt}
+
+\setlist[itemize]{leftmargin=13pt,topsep=2pt,itemsep=1.5pt,parsep=0pt,label={\small\textbullet}}
+
+% \entry{Title}{Right}{Subtitle}{Right2}
+\newcommand{\entry}[4]{%
+  \begin{tabularx}{\textwidth}{@{}X@{\hspace{6pt}}r@{}}
+    \textbf{#1} & #2\\[-1pt]
+    \textit{#3} & \textit{#4}
+  \end{tabularx}\vspace{-2pt}}
+\newcommand{\oneline}[2]{%
+  \begin{tabularx}{\textwidth}{@{}X@{\hspace{6pt}}r@{}}
+    #1 & #2
+  \end{tabularx}\vspace{-2pt}}
+\newcommand{\gap}{\vspace{5pt}}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{22}{26}\selectfont\bfseries DongGeon (Lloyd) Kwak}\\[5pt]
+  {\small
+  \href{mailto:kwaklloyd@gmail.com}{kwaklloyd@gmail.com}\enspace$\cdot$\enspace
+  \href{https://lloydkwak.github.io}{lloydkwak.github.io}\enspace$\cdot$\enspace
+  \href{https://github.com/lloydkwak}{github.com/lloydkwak}\enspace$\cdot$\enspace
+  \href{https://www.linkedin.com/in/lloyd-kwak-347a79435}{linkedin.com/in/lloyd-kwak-347a79435}}
+\end{center}
+\vspace{-2pt}
+
+\section{Research Interests}
+Generalist robot learning, cross-embodiment learning, lifelong robot learning (adaptation, failure detection and recovery), and long-horizon manipulation with task and motion planning.
+
+\section{Education}
+\entry{Seoul National University of Science and Technology (SeoulTech)}{Seoul, Korea}
+      {B.E. in Computer Science and Engineering; Minor in Applied Artificial Intelligence}{Feb.\ 2022 -- Aug.\ 2027 (expected)}
+\begin{itemize}
+  \item GPA 4.13/4.50 (8th of 114 in major).
+  \item A+ in Linear Algebra, Discrete Mathematics, Machine Learning, Computer Vision, Data Analysis, Operating Systems; also completed Probability and Random Variables, Reinforcement Learning.
+\end{itemize}
+
+\section{Research Experience}
+\entry{HCIR Lab (Human-Centered Intelligent Robotics), SeoulTech}{Seoul, Korea}
+      {Undergraduate Researcher, advised by Prof.\ Ji-Hyeong Han}{Jul.\ 2025 -- Present}
+\begin{itemize}
+  \item \textbf{FAVOR} (first-author manuscript in preparation): training-free correction of a pretrained diffusion policy when a joint of the robot arm locks or loses range.
+  \item Compared seven corrections applied at three stages of inference over 112 simulated fault conditions with paired seeds. Retargeting the intended end-effector motion position-first raised mean success from 0.37 to 0.60 (0.11 to 0.48 with a locked joint).
+  \item Showed that the end-effector error left after correction predicts which faults are recoverable (AUC 0.94); now validating on a real xArm7.
+\end{itemize}
+\gap
+\entry{MTREA: Multi-Task Retentive Embodiment Adaptation}{SeoulTech}
+      {Capstone Design project, two-person team}{Sep.\ 2026 -- Present}
+\begin{itemize}
+  \item Studying whether fine-tuning the $\pi_{0.5}$ VLA on a low-cost SO-101 arm degrades its performance on held-out tasks; co-designed the protocol (naive fine-tuning baseline, four held-out task families, per-task oracle).
+  \item Built calibration and teleoperation for data collection, remote GPU training, and asynchronous policy serving on the real arm.
+\end{itemize}
+
+\section{Manuscripts and Patents}
+\begin{itemize}[leftmargin=28pt,labelwidth=22pt,labelsep=6pt,align=left,itemsep=3pt]
+  \item [M1]\enspace \textbf{D.\ Kwak}. ``FAVOR: Fault-Aware Visuomotor Policy Adaptation via Ordered Retargeting.'' \textit{Manuscript in preparation}, 2026. \href{https://github.com/lloydkwak/FAVOR}{[code]}
+  \item [P1]\enspace K.\ Lee, G.\ Lee, \textbf{D.\ Kwak}. ``Real-time crack detection system for construction sites.'' Korean Patent 10-2647135, registered Mar.\ 12, 2024 (filed Oct.\ 31, 2022).
+\end{itemize}
+
+\section{Selected Projects}
+\entry{MakeYourBrick: One Photo to a Buildable LEGO Model}{May 2026}
+      {SeoulTech ST Startup Club Support Program, team PixBricks}{}
+\begin{itemize}
+  \item Web app that reconstructs an object from a single photo (SAM2, SAM 3D Objects) and converts it into a buildable LEGO model; handled color mapping and shadow artifacts.
+\end{itemize}
+\gap
+\entry{RL-Arena: Competitive Reinforcement-Learning Platform}{Nov.\ -- Dec.\ 2025}
+      {Open Source Software course; two-person team; selected as an outstanding project}{}
+\begin{itemize}
+  \item Platform for submitting RL agents and ranking them by ELO. I built the environment package (published on PyPI), the match executor, and most of the backend.
+\end{itemize}
+\gap
+\entry{Frequency-Aware Preprocessing for Diffusion Image Detection}{Dec.\ 2025}
+      {Team project, two people}{}
+\begin{itemize}
+  \item Found that diffusion-generated images have a narrower pixel-intensity spread and built preprocessing around it; ResNet-50 test accuracy rose from 72.6\% to 96.3\% on 115k images.
+\end{itemize}
+\gap
+\entry{Logisim MLP: A Neural Network Built from Logic Gates}{Spring 2025}
+      {Digital Logic and Systems course; selected as an outstanding project}{}
+\begin{itemize}
+  \item A 256-128-10 MNIST classifier implemented as a digital logic circuit, with trained weights stored in ROM.
+\end{itemize}
+
+\section{Work Experience}
+\oneline{\textbf{CHASER}, Software Developer}{Nov.\ 2022 -- Jan.\ 2023}
+\oneline{\textbf{Laver}, Software Developer}{Jun.\ 2022 -- Oct.\ 2022}
+\begin{itemize}
+  \item Developed an object-detection system from model to product integration, backend APIs, and an IFC-to-XML converter for building models.
+\end{itemize}
+
+\section{Honors}
+\oneline{Outstanding term project selections: Digital Logic and Systems, Open Source Software, Computer Vision}{2025 -- 2026}
+\oneline{SeoulTech ST Startup Club Support Program, team PixBricks}{2026}
+
+\section{Skills}
+\begin{tabularx}{\textwidth}{@{}l@{\hspace{12pt}}X@{}}
+  \textbf{Programming}   & Python, C++\\
+  \textbf{Robot learning}& PyTorch, LeRobot, MuJoCo, LIBERO\\
+  \textbf{Tools}         & Docker, Git, Linux\\
+  \textbf{Languages}     & Korean (native); English (TOEIC Speaking, Level AL)\\
+  \textbf{Certification} & Craftsman Programming, HRD Korea (2023)
+\end{tabularx}
+
+\section{References}
+\textbf{Prof.\ Ji-Hyeong Han}, Department of Computer Science and Engineering, SeoulTech (research advisor)\\
+\href{mailto:jhhan@seoultech.ac.kr}{jhhan@seoultech.ac.kr}
+
+\end{document}

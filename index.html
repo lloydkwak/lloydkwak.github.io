@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DongGeon (Lloyd) Kwak · Robot Learning</title>
+  <meta name="author" content="DongGeon Kwak">
+  <meta name="description" content="DongGeon (Lloyd) Kwak, undergraduate researcher at SeoulTech working on robot learning.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="DongGeon Kwak">
+  <meta property="og:description" content="Undergraduate researcher at SeoulTech working on robot learning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lloydkwak.github.io/">
+  <meta property="og:image" content="https://lloydkwak.github.io/images/profile.jpg">
+  <meta property="og:image:alt" content="DongGeon (Lloyd) Kwak">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://lloydkwak.github.io/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231772d0'/%3E%3Ctext x='16' y='21.5' font-family='Arial' font-size='15' font-weight='bold' fill='white' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="script.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "DongGeon Kwak",
+    "alternateName": "Lloyd Kwak",
+    "url": "https://lloydkwak.github.io/",
+    "image": "https://lloydkwak.github.io/images/profile.jpg",
+    "sameAs": ["https://github.com/lloydkwak", "https://www.linkedin.com/in/lloyd-kwak-347a79435"]
+  }
+  </script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-name" href="#main">Lloyd Kwak</a>
+    <div class="nav-links">
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+<main id="main">
+
+  <header class="bio">
+    <div class="bio-text">
+      <p class="eyebrow">Robot learning · SeoulTech</p>
+      <h1 class="name">DongGeon <span>(Lloyd) Kwak</span></h1>
+      <p>
+        I'm a fourth-year undergraduate in Computer Science and Engineering (minor in Applied AI) at
+        <a href="https://en.seoultech.ac.kr/">Seoul National University of Science and Technology</a>,
+        where I work with <a href="https://sites.google.com/view/hcir">Prof. Ji-Hyeong Han</a> in the HCIR Lab.
+      </p>
+      <p>
+        I work on robot learning. My current project corrects a pretrained diffusion policy on a robot whose joint has failed, without retraining.
+        Before that, I worked as a software developer at two companies,
+        and I'm a co-inventor on a Korean patent for crack detection with mobile robots.
+      </p>
+      <p class="bio-links" aria-label="Profile links">
+        <a href="mailto:kwaklloyd@gmail.com">Email</a>
+        <a href="data/DongGeon_Kwak_CV.pdf">CV <span class="file-type">PDF</span></a>
+        <a href="data/DongGeon_Kwak_Research_Portfolio.pdf">Research portfolio <span class="file-type">PDF</span></a>
+        <a href="https://github.com/lloydkwak">GitHub</a>
+        <a href="https://www.linkedin.com/in/lloyd-kwak-347a79435">LinkedIn</a>
+      </p>
+    </div>
+    <div class="bio-photo">
+      <a href="images/profile.jpg"><img src="images/profile.jpg" alt="DongGeon Kwak" width="800" height="1000" fetchpriority="high"></a>
+    </div>
+  </header>
+
+  <section id="research" aria-labelledby="research-title">
+  <div class="section-header">
+    <h2 id="research-title">Research</h2>
+    <p>
+      I'm interested in generalist robot learning: policies that transfer across robot bodies (cross-embodiment learning),
+      keep improving after deployment by detecting and recovering from failures (lifelong robot learning),
+      and carry out long-horizon manipulation with task and motion planning.
+    </p>
+  </div>
+
+  <div class="papers">
+    <article class="paper highlighted" data-video>
+      <div class="paper-media">
+        <div class="one">
+          <div class="two"><video muted loop playsinline preload="none" aria-label="FAVOR simulated robot rollouts"><source src="images/favor.mp4" type="video/mp4"></video></div>
+          <img src="images/favor.jpg" alt="FAVOR rollouts" width="160" height="160">
+        </div>
+      </div>
+      <div class="paper-info">
+        <a href="https://github.com/lloydkwak/FAVOR" class="papertitle">FAVOR: Fault-Aware Visuomotor Policy Adaptation via Ordered Retargeting</a>
+        <div class="paper-authors"><strong>DongGeon Kwak</strong></div>
+        <div class="paper-venue"><em>Manuscript in preparation</em>, 2026</div>
+        <div class="paper-links"><a href="https://github.com/lloydkwak/FAVOR">Code</a> / <a href="https://github.com/lloydkwak/FAVOR/blob/main/paper/video/favor_supp.mp4">Full video</a></div>
+        <p class="paper-desc">
+          Training-free correction of a pretrained diffusion policy when a robot joint locks or loses range.
+          Across 112 simulated fault conditions, restoring the end-effector position first raised mean success from 0.37 to 0.60 (0.11 to 0.48 with a locked joint).
+          Real-robot tests on an xArm7 are in progress.
+        </p>
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-media"><div class="one"><img src="images/mtrea.jpg" alt="MTREA pipeline" width="160" height="160" loading="lazy" decoding="async"></div></div>
+      <div class="paper-info">
+        <a href="https://github.com/xxrainow/MTREA" class="papertitle">MTREA: Multi-Task Retentive Embodiment Adaptation</a>
+        <div class="paper-authors">Two-person team · <strong>DongGeon Kwak</strong>, contributor</div>
+        <div class="paper-venue"><em>Capstone Design, SeoulTech</em>, 2026 (ongoing)</div>
+        <div class="paper-links"><a href="https://github.com/xxrainow/MTREA">Code</a></div>
+        <p class="paper-desc">
+          Does fine-tuning the π0.5 VLA on a new low-cost arm (SO-101) degrade its performance on held-out tasks?
+          I co-designed the protocol and built teleoperation, remote training and policy serving; the evaluation is next.
+        </p>
+      </div>
+    </article>
+  </div>
+  </section>
+
+  <section id="projects" aria-labelledby="projects-title">
+  <div class="section-header">
+    <h2 id="projects-title">Selected projects</h2>
+    <p>From learning systems to software people can use.</p>
+  </div>
+
+  <div class="papers">
+    <article class="paper" data-video>
+      <div class="paper-media">
+        <div class="one">
+          <div class="two"><video muted loop playsinline preload="none" aria-label="MakeYourBrick photo to brick model demonstration"><source src="images/makeyourbrick.mp4" type="video/mp4"></video></div>
+          <img src="images/makeyourbrick.jpg" alt="Photo to brick model" width="160" height="160" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div class="paper-info">
+        <a href="https://github.com/lloydkwak/MakeYourBrick" class="papertitle">MakeYourBrick: One Photo to a Buildable LEGO Model</a>
+        <div class="paper-venue"><em>SeoulTech ST startup club (team PixBricks)</em>, 2026</div>
+        <div class="paper-links"><a href="https://github.com/lloydkwak/MakeYourBrick">Code</a></div>
+        <p class="paper-desc">A web app that reconstructs an object from one photo with SAM2 and SAM 3D Objects and converts it into a buildable LEGO model (10,263 bricks for the queen shown). I worked on color mapping and shadow artifacts.</p>
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-media"><div class="one"><img src="images/rlarena.jpg" alt="RL-Arena services" width="160" height="160" loading="lazy" decoding="async"></div></div>
+      <div class="paper-info">
+        <a href="https://github.com/rl-arena" class="papertitle">RL-Arena: A Competitive Reinforcement-Learning Platform</a>
+        <div class="paper-venue"><em>Open Source Software course</em>, 2025 &nbsp;·&nbsp; <span class="award">selected as an outstanding project</span></div>
+        <div class="paper-links"><a href="https://github.com/rl-arena">Code</a> / <a href="https://pypi.org/project/rl-arena/">PyPI</a> / <a href="https://www.youtube.com/watch?v=HnM3PJJuT9k">demo</a></div>
+        <p class="paper-desc">A platform for submitting RL agents and ranking them by ELO. I built the environment package (on PyPI), the match runner and most of the backend; two-person team.</p>
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-media"><div class="one"><img src="images/deepdetection.jpg" alt="Pixel intensity histogram" width="160" height="160" loading="lazy" decoding="async"></div></div>
+      <div class="paper-info">
+        <a href="https://github.com/lloydkwak/DeepDetection_2025" class="papertitle">Frequency-Aware Preprocessing for Diffusion Image Detection</a>
+        <div class="paper-venue"><em>Team project (2 people)</em>, 2025</div>
+        <div class="paper-links"><a href="https://github.com/lloydkwak/DeepDetection_2025">Code</a></div>
+        <p class="paper-desc">Diffusion-generated images have a narrower pixel-intensity spread; preprocessing built on this raised ResNet-50 test accuracy from 72.6% to 96.3% on 115k images.</p>
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-media"><div class="one"><img src="images/logisim.jpg" alt="Logisim circuit" width="160" height="160" loading="lazy" decoding="async"></div></div>
+      <div class="paper-info">
+        <a href="https://github.com/lloydkwak/Logisim_MLP" class="papertitle">Logisim MLP: A Neural Network Built from Logic Gates</a>
+        <div class="paper-venue"><em>Digital Logic and Systems course</em>, 2025 &nbsp;·&nbsp; <span class="award">selected as an outstanding project</span></div>
+        <div class="paper-links"><a href="https://github.com/lloydkwak/Logisim_MLP">Code</a></div>
+        <p class="paper-desc">A 256-128-10 MNIST classifier built entirely as a digital logic circuit, with trained weights stored in ROM.</p>
+      </div>
+    </article>
+  </div>
+  </section>
+
+  <section id="patent" aria-labelledby="patent-title">
+  <div class="section-header">
+    <h2 id="patent-title">Patent</h2>
+  </div>
+  <div class="plain">
+    <p>
+      <span class="papertitle-plain">Real-time crack detection system for construction sites</span><br>
+      K. Lee, G. Lee, <strong>D. Kwak</strong><br>
+      <em>Korean Patent 10-2647135</em>, registered March 2024<br>
+      Mobile robots record video at construction sites, and cracks are detected and tracked across frames.
+    </p>
+  </div>
+  </section>
+
+  <section id="experience" aria-labelledby="experience-title">
+  <div class="section-header">
+    <h2 id="experience-title">Experience &amp; education</h2>
+  </div>
+  <div class="plain">
+    <table class="cv">
+      <caption class="sr-only">Research, industry experience and education</caption>
+      <tr><td class="when">2025 – now</td><td><strong>Undergraduate Researcher</strong>, HCIR Lab, SeoulTech (advisor: Prof. Ji-Hyeong Han)</td></tr>
+      <tr><td class="when">2022 – 2023</td><td><strong>Software Developer</strong>, Laver and CHASER</td></tr>
+      <tr><td class="when">2022 – 2027</td><td><strong>B.E. Computer Science and Engineering</strong>, SeoulTech, minor in Applied AI; GPA 4.13/4.5; expected Aug. 2027</td></tr>
+    </table>
+    <p class="career-link"><a href="data/DongGeon_Kwak_Career_Description.pdf">Detailed career description <span class="file-type">PDF</span></a></p>
+  </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Get in touch</h2>
+    <p>For research and engineering conversations, reach me at <a href="mailto:kwaklloyd@gmail.com">kwaklloyd@gmail.com</a>.</p>
+  </section>
+
+</main>
+  <footer class="footer">
+    <p>Layout inspired by <a href="https://github.com/jonbarron/jonbarron.github.io">Jon Barron's website</a>.<br>Last updated <time datetime="2026-11">November 2026</time> · <a href="https://github.com/lloydkwak/lloydkwak.github.io">Source</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

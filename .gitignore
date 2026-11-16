@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+_site/
+__pycache__/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
