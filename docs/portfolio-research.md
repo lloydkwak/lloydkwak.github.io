@@ -19,6 +19,7 @@ Reviewed 17 November 2026. These are observations from the authors' own sites, f
 - Preserve the original PDFs and project media. Thumbnails, results, individual contributions and source links carry the content.
 - Keep dependencies at zero. The static site works without JavaScript; clips gain touch/keyboard controls with JavaScript. Reduced motion disables hover playback.
 - Use the profile README as a short introduction and gateway to the full website. Replace the existing profile README completely, as requested by the owner.
+- Describe the owner as a Computer Science undergraduate working on robot learning. Keep Prof. Ji-Hyeong Han's role limited to research feedback and weekly lab meeting participation in research/experience entries; omit lab membership, research appointments and formal advisor/reference claims. Keep the website introduction, profile README introduction and document cover free of professor/lab mentions.
 
 ## GitHub publication model
 
